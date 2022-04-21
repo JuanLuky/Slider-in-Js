@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(33, 33, 33);
+}
+
+/* Buttons */
+body::-webkit-scrollbar-button:single-button {
+    border-radius:10px;
+    border: 1px solid #00a6ed96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+  }
+  /* Up */
+  body::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #00a6ed96 transparent;
+  }
+  body::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #00c3ff transparent;
+  }
+  /* Down */
+  body::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #00a6ed96 transparent transparent transparent;
+  }
+  
+  body::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #00c3ff transparent transparent transparent;
+  }
+body::-webkit-scrollbar-thumb {
+    border-radius:10px;
+      background-color: #171717;
+  border: 1px solid #00a6ed96;
+  box-shadow: inset 0 0 6px rgba(0, 208, 255, 0.5);
+}
+body {
+  background-color: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(233, 233, 233);
+}
+.one {
+  background-image:linear-gradient(#0000008b, #000000c2),  url('https://picsum.photos/1280/740');
+}
+.two {
+  background-image:linear-gradient(#0000008b, #000000c2),  url('https://picsum.photos/1280/730');
+}
+.tree {
+  background-image:linear-gradient(#0000008b, #000000c2),  url('https://picsum.photos/1280/720');
+}
+.header {
+  height: 60px;
+  background-color: rgb(33, 33, 33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.slider {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.slider-width {
+  height: 100%; 
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.slider-item {
+  width: 100vw;
+  height:inherit;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  text-shadow: 0px 2px 3px #171717d9;
+}
+.slider-controls {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider-control {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #00a6ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
